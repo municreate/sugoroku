@@ -78,8 +78,6 @@ public class Game {
 				disp.showGoalSquare(goalLocation);
 				
 				drawMap(goal,location);
-
-				disp.showLine();
 			}
 			if (goal == location) {
 				disp.showEnd();
@@ -121,6 +119,10 @@ public class Game {
 			disp.twoSquareBack(boardDate[location]);
 			moveLocation = Integer.parseInt(boardDate[location]);
 			break;
+		case "10":
+			disp.returnToStart(boardDate[location]);
+			moveLocation = - location;
+			break;
 		default:
 			break;
 		}
@@ -137,5 +139,7 @@ public class Game {
 			}
 		}
 		System.out.println("");
+		
+		disp.showLine();
 	}
 }

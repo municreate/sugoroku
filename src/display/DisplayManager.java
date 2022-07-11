@@ -5,7 +5,7 @@ import game.Player;
 public class DisplayManager {
 
 	public void showStart() {
-		System.out.println("すごろくを始めます！\n始めるにはEnterキーを押してください。");
+		System.out.println("◆すごろく◆\n始めるにはEnterキーを押してください。");
 	}
 
 	public void joinPlayer(Player player) {
@@ -39,6 +39,10 @@ public class DisplayManager {
 	public void showGoalSquare(int i) {
 		System.out.println("ゴールまで残り: " + i);
 	}
+	
+	public void returnToStart(String string) {
+		System.out.println("\"スタートへ戻る\"のマスに止まりました。\nスタートへ戻ります。\n");
+	}
 
 	public void showGoal(String name) {
 		System.out.println(name + "さんがゴールしました！");
@@ -55,5 +59,4 @@ public class DisplayManager {
 	public void showEnd() {
 		System.out.println("ゲームを終了します。");
 	}
-
 }
